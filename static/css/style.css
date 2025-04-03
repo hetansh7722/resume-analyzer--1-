@@ -1,0 +1,554 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+a {
+  color: #00bcd4;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #00e5ff;
+}
+
+/* Header Styles */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 20px 0;
+  border-bottom: 1px solid #333;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #00bcd4;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+/* Main Content Styles */
+main {
+  margin-bottom: 40px;
+}
+
+/* Upload Section Styles */
+.upload-section {
+  background-color: #111;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.file-upload {
+  margin-bottom: 20px;
+}
+
+.file-upload input {
+  display: none;
+}
+
+.file-upload label {
+  display: block;
+  padding: 30px;
+  background-color: #222;
+  border: 2px dashed #444;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.file-upload label:hover {
+  background-color: #333;
+  border-color: #00bcd4;
+}
+
+.file-upload label i {
+  font-size: 3rem;
+  color: #00bcd4;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.file-upload label span {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.submit-btn {
+  background-color: #00bcd4;
+  color: #000;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+
+.submit-btn:hover {
+  background-color: #00e5ff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 188, 212, 0.4);
+}
+
+/* Features Section */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.feature {
+  background-color: #111;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+.feature i {
+  font-size: 3rem;
+  color: #00bcd4;
+  margin-bottom: 20px;
+}
+
+.feature h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.feature p {
+  color: #aaa;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #333;
+  color: #777;
+}
+
+/* Results Page Styles */
+.results-container {
+  background-color: #000;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 15px;
+  background-color: #222;
+  border-radius: 5px;
+  color: #00bcd4;
+  transition: all 0.3s;
+}
+
+.back-btn:hover {
+  background-color: #333;
+}
+
+.results-main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.profile-section {
+  background-color: #111;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+  min-width: 300px;
+}
+
+.profile-icon {
+  font-size: 4rem;
+  color: #00bcd4;
+}
+
+.profile-info h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.profile-info p {
+  color: #aaa;
+  margin-bottom: 5px;
+}
+
+.resume-score {
+  text-align: center;
+  padding: 20px;
+  background-color: #222;
+  border-radius: 10px;
+  min-width: 200px;
+}
+
+.resume-score h3 {
+  margin-bottom: 15px;
+  color: #00bcd4;
+}
+
+.score-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #00bcd4, #007c91);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+}
+
+.score-circle span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.analysis-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.analysis-card {
+  background-color: #111;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.analysis-card h3 {
+  color: #00bcd4;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+}
+
+.field-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.field-desc {
+  color: #aaa;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.skill-tag {
+  background-color: #222;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.skill-tag.recommended {
+  background-color: #007c91;
+  color: #fff;
+}
+
+.skill-note {
+  color: #aaa;
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.courses-card {
+  grid-column: 1 / -1;
+}
+
+.courses-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+}
+
+.course {
+  background-color: #222;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.course h4 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.course-link {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #007c91;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+
+.course-link:hover {
+  background-color: #00bcd4;
+  color: #000;
+}
+
+/* Admin Login Styles */
+.admin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.admin-login-card {
+  background-color: #111;
+  border-radius: 10px;
+  padding: 40px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.admin-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.admin-header h1 {
+  color: #00bcd4;
+  margin-bottom: 10px;
+}
+
+.admin-header p {
+  color: #aaa;
+}
+
+.admin-form .form-group {
+  margin-bottom: 20px;
+}
+
+.admin-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #ccc;
+}
+
+.admin-form input {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #222;
+  border: 1px solid #333;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.admin-form input:focus {
+  outline: none;
+  border-color: #00bcd4;
+}
+
+.admin-submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #00bcd4;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+
+.admin-submit-btn:hover {
+  background-color: #00e5ff;
+}
+
+.admin-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.back-link {
+  color: #aaa;
+  transition: color 0.3s;
+}
+
+.back-link:hover {
+  color: #00bcd4;
+}
+
+/* Dashboard Styles */
+.dashboard-container {
+  max-width: 1400px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333;
+}
+
+.logout-btn {
+  padding: 8px 15px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #d32f2f;
+}
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background-color: #111;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.stat-card i {
+  font-size: 2.5rem;
+  color: #00bcd4;
+  margin-bottom: 15px;
+}
+
+.stat-card h3 {
+  color: #ccc;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.stat-date {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.data-table-container {
+  background-color: #111;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.data-table-container h2 {
+  margin-bottom: 20px;
+  color: #00bcd4;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #ccc;
+}
+
+table th {
+  background-color: #222;
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: bold;
+  color: #00bcd4;
+}
+
+table td {
+  padding: 10px 15px;
+  border-bottom: 1px solid #333;
+}
+
+table tr:hover {
+  background-color: #1a1a1a;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .profile-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .resume-score {
+    width: 100%;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+}
+

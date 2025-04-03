@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Smart Resume Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container dashboard-container">
+        <header class="dashboard-header">
+            <h1><i class="fas fa-tachometer-alt"></i> Admin Dashboard</h1>
+            <div class="admin-actions">
+                <a href="/logout" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </header>
+        
+        <main class="dashboard-main">
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Total Users</h3>
+                    <p class="stat-number">{{ tables[0].count('ID') }}</p>
+                </div>
+                
+                <div class="stat-card">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Resumes Analyzed</h3>
+                    <p class="stat-number">{{ tables[0].count('ID') }}</p>
+                </div>
+                
+                <div class="stat-card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Today</h3>
+                    <p class="stat-date">{{ now.strftime('%d %b, %Y') }}</p>
+                </div>
+            </div>
+            
+            <div class="data-table-container">
+                <h2><i class="fas fa-database"></i> User Data</h2>
+                <div class="table-responsive">
+                    {{ tables[0]|safe }}
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2023 Smart Resume Analyzer | Admin Panel</p>
+        </footer>
+    </div>
+</body>
+</html>
+

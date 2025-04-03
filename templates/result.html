@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Analysis Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container results-container">
+        <header>
+            <h1><i class="fas fa-file-alt"></i> Resume Analysis Results</h1>
+            <a href="/" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        </header>
+        
+        <main class="results-main">
+            <div class="profile-section">
+                <div class="profile-header">
+                    <div class="profile-icon">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="profile-info">
+                        <h2>{{ resume.name if resume.name else "Unknown" }}</h2>
+                        <p><i class="fas fa-envelope"></i> {{ resume.email if resume.email else "No email found" }}</p>
+                        <p><i class="fas fa-phone"></i> {{ resume.mobile_number if resume.mobile_number else "No phone found" }}</p>
+                    </div>
+                </div>
+                
+                <div class="resume-score">
+                    <h3>Resume Score</h3>
+                    <div class="score-circle">
+                        <span>80</span>
+                    </div>
+                    <p>Your resume is good but could be improved</p>
+                </div>
+            </div>
+            
+            <div class="analysis-section">
+                <div class="analysis-card">
+                    <h3><i class="fas fa-laptop-code"></i> Predicted Field</h3>
+                    <div class="card-content">
+                        <p class="field-name">{{ reco_field }}</p>
+                        <p class="field-desc">Based on your skills, we recommend pursuing a career in {{ reco_field }}</p>
+                    </div>
+                </div>
+                
+                <div class="analysis-card">
+                    <h3><i class="fas fa-tools"></i> Your Skills</h3>
+                    <div class="card-content">
+                        <div class="skills-list">
+                            {% for skill in resume.skills %}
+                            <span class="skill-tag">{{ skill }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="analysis-card">
+                    <h3><i class="fas fa-lightbulb"></i> Recommended Skills</h3>
+                    <div class="card-content">
+                        <div class="skills-list">
+                            {% for skill in recommended_skills %}
+                            <span class="skill-tag recommended">{{ skill }}</span>
+                            {% endfor %}
+                        </div>
+                        <p class="skill-note">Adding these skills can improve your employability in {{ reco_field }}</p>
+                    </div>
+                </div>
+                
+                <div class="analysis-card courses-card">
+                    <h3><i class="fas fa-graduation-cap"></i> Recommended Courses</h3>
+                    <div class="card-content">
+                        <div class="courses-list">
+                            {% for course in courses %}
+                            <div class="course">
+                                <h4>{{ course[0] }}</h4>
+                                <a href="{{ course[1] }}" target="_blank" class="course-link">
+                                    <i class="fas fa-external-link-alt"></i> View Course
+                                </a>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2023 Smart Resume Analyzer | <a href="/admin">Admin Login</a></p>
+        </footer>
+    </div>
+</body>
+</html>
+
